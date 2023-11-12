@@ -169,8 +169,9 @@ def displayAllTabs():
     
 
 ##5
-#def openNestedTab():
-    
+def openNestedTab():
+    print("None")
+##didn't understand it   
 
 
 main()

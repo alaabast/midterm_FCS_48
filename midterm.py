@@ -16,11 +16,14 @@ def main():
         title=input("Enter the title of the website")                
         link = input("Enter the link of the website: ")
         openNewTab(link)
+    if x==2:
+        index=input("Enter the title of the website :")
+        
 
 
 
 def openNewTab(link):      
-    webbrowser.open(link)
+    webbrowser.open(link) #the source: https://blog.finxter.com/how-to-open-a-url-in-your-browser-from-a-python-script/
     
     
     

@@ -1,4 +1,7 @@
 import webbrowser
+import urllib.request
+import requests
+
 
 def main():
     website_dict = {}
@@ -16,16 +19,36 @@ def main():
 
             openNewTab(link)
 
+
         if x == 2:
             index = input("Enter the title of the website :")
             if index in website_dict:
-                webbrowser.get(website_dict[index]).close()
+                linkk=website_dict[index]
             else:
                 print("this tab is not availble\n Closing the last tab...")
                 l = list(website_dict);
-                last_link = l[-1]
-                webbrowser.get(last_link).close()
-       if x==3:
+                linkk = l[-1]
+            webbrowser.get(linkk).close()
+            
+            
+        if x==3:
+            i = input("Enter the title of the website :")
+            if i in website_dict:
+                website_url = website_dict[i]
+            else:
+                print("this tab is not availble\n ")
+                l1 = list(website_dict);
+                website_url = l1[-1]
+            neww="view-source:" + website_url
+            webbrowser.open_new_tab(neww)
+
+           
+            
+            
+                
+                
+                
+            
            
 
 def openNewTab(link):

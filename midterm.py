@@ -53,9 +53,9 @@ def main():
             with open("./link.txt", "r") as f:
                 for line in f:
                     words = line.split()
-                    title = words[0]
+                    name = words[0]
                     link = words[1]
-                    website_dict[title] = link
+                    website_dict[name] = link
                     
             print(website_dict)
          

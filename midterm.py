@@ -58,7 +58,7 @@ def main():
 
 
 
-    
+##1    
 def openTab():
     title = input("Enter the title of the website:")
     link = input("Enter the link of the website: ")
@@ -67,13 +67,13 @@ def openTab():
     
  
     
- 
+##2 
 def closeTab():
     
     index = input("Enter the title of the website :")
     if index in website_dict:
             t=index
-            webbrowser.get(website_dict[t]).close_window()
+            webbrowser.get(website_dict[t]).close_window() #didn't work using Microsoft Edge as a browser
     if index not in website_dict:
         print("This tab is not availble\n Closing the last tab...")
         keys_list = list(website_dict.keys())
@@ -84,7 +84,7 @@ def closeTab():
 
 
 
-
+##3
 def switchTab():
     
     i = input("Enter the title of the website :")
@@ -106,15 +106,10 @@ def switchTab():
  
     
  
-    
-def displayTab():
-    print("All open tabs:")
-    for name,link in website_dict.items():
-        print("_ "+name+"\n")   
-    
+   
 
 
-
+##7
 def saveTabs():
     data = {}
     y=input("Enter the path of the file:\n")
@@ -131,7 +126,7 @@ def saveTabs():
 
     
 
-
+##8
 def importTabs():
     path=input("Enter the path of your file:\n")
     with open(path, "r") as f: #open the file for reading only
@@ -146,7 +141,7 @@ def importTabs():
     
 
 
-
+##4
 def displayAllTabs():
     parent_child_dict = {} #create a new dict.
 
@@ -173,8 +168,8 @@ def displayAllTabs():
 
     
 
-
-def openNestedTab():
+##5
+#def openNestedTab():
     
 
 

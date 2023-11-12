@@ -29,7 +29,7 @@ def main():
              switchTab()
                
         elif x==4:
-            displayTab()
+            displayAllTabs()
             
         elif x == 6:
             website_dict={}
@@ -141,6 +141,15 @@ def importTabs():
     
     
 
+def displayAllTabs():
+    if not website_dict:
+        print("No tabs to display.")
+    else:
+        for i, tab in enumerate(website_dict):
+            print(f"{i}. {tab['title']}")
+            if tab['nested_tabs']:
+                for j, nested_tab in enumerate(tab['nested_tabs']):
+                    print(f"   {i}.{j}. {nested_tab['title']}")
 
 
 

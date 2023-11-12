@@ -19,7 +19,7 @@ def main():
             webbrowser.open(link)
 
 
-        if x == 2:
+        elif x == 2:
             index = input("Enter the title of the website :")
             if index in website_dict:
                 t=index
@@ -31,7 +31,7 @@ def main():
             print(website_dict)
             
             
-        if x==3: #source: https://stackoverflow.com/questions/3533528/python-web-crawlers-and-getting-html-source-code
+        elif x==3: #source: https://stackoverflow.com/questions/3533528/python-web-crawlers-and-getting-html-source-code
             i = input("Enter the title of the website :")
             if i in website_dict:
                 website_url = website_dict[i]
@@ -49,7 +49,7 @@ def main():
             print(source)
                
         
-        if x == 8:
+        elif x == 8:
             with open("./link.txt", "r") as f:
                 for line in f:
                     words = line.split()
@@ -58,9 +58,16 @@ def main():
                     website_dict[name] = link
                     
             print(website_dict)
-         
+            
+            
+        elif x == 9:
+            # Exit the program.
+            break
 
-          
+        else:
+            print("Invalid choice.")
 
+   
+    print("End of the program \nThank you...")
 
 main()

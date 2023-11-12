@@ -23,12 +23,13 @@ def main():
         if x == 2:
             index = input("Enter the title of the website :")
             if index in website_dict:
-                linkk=website_dict[index]
+                t=index
             else:
-                print("this tab is not availble\n Closing the last tab...")
-                l = list(website_dict);
-                linkk = l[-1]
-            webbrowser.get(linkk).close()
+                print("This tab is not availble\n Closing the last tab...")
+                keys_list = list(website_dict.keys())
+                t = keys_list[-1]
+            del website_dict[t]
+            print(website_dict)
             
             
         if x==3:
@@ -40,17 +41,13 @@ def main():
                 l1 = list(website_dict);
                 website_url = l1[-1]
             neww="view-source:" + website_url
-            webbrowser.open_new_tab(neww)
+            response = requests.get(website_url)
+            m=response.content
+            webbrowser.open(m)
+            
+             
 
-           
-            
-            
-                
-                
-                
-            
-           
-
+        
 def openNewTab(link):
     webbrowser.open(link)
 

@@ -7,8 +7,9 @@ import json
 import tkinter as tk
 from tkinter import ttk
 
-#website_dict = {}
-website_dict={"s":"https://www.sefactory.io","s1":"https://www.sefactory.io","s2":"https://www.sefactory.io","f":"https://www.facebook.com","f1":"https://www.facebook.com","f2":"https://www.facebook.com"}
+
+website_dict = {}
+#website_dict={"s":"https://www.sefactory.io","s1":"https://www.sefactory.io","s2":"https://www.sefactory.io","f":"https://www.facebook.com","f1":"https://www.facebook.com","f2":"https://www.facebook.com"}
 def main():
     
 

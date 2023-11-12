@@ -42,9 +42,9 @@ def main():
                 print("this tab is not availble\n ")
                 l1 = list(website_dict);
                 website_url = l1[-1]
-                req = requests.get(website_url)
-                source = req.content
-                source = source.decode()
+                req = requests.get(website_url) #create a request
+                source = req.content #get the content of the page source
+                source = source.decode() #convert it to string
             print("the page source is :\n")
             print(source)
                

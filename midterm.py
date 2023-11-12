@@ -30,6 +30,9 @@ def main():
                
         elif x==4:
             displayAllTabs()
+       
+        elif x == 5:
+            openNestedTab()
             
         elif x == 6:
             website_dict={}
@@ -141,6 +144,8 @@ def importTabs():
     
     
 
+
+
 def displayAllTabs():
     if not website_dict:
         print("No tabs to display.")
@@ -156,6 +161,8 @@ def displayAllTabs():
     
 
 
+def openNestedTab():
+    
 
 
 main()

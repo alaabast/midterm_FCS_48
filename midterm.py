@@ -33,6 +33,7 @@ def main():
             
         elif x == 6:
             website_dict={}
+            print(website_dict)
             
         elif x == 7: #source: https://realpython.com/lessons/serializing-json-data/
             saveTabs()
@@ -139,6 +140,8 @@ def importTabs():
     print(website_dict) #print the dict. for seeing the result 
     
     
+
+
 
 
     

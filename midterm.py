@@ -7,7 +7,8 @@ import json
 import tkinter as tk
 from tkinter import ttk
 
-website_dict = {}
+#website_dict = {}
+website_dict={"s":"https://www.sefactory.io","s1":"https://www.sefactory.io","s2":"https://www.sefactory.io","f":"https://www.facebook.com","f1":"https://www.facebook.com","f2":"https://www.facebook.com"}
 def main():
     
 
@@ -147,21 +148,33 @@ def importTabs():
 
 
 def displayAllTabs():
+    parent_child_dict = {} #create a new dict.
+
     if not website_dict:
-        print("No tabs to display.")
+        print("No tabs to display.") #if the dict. is empty
     else:
-        for i, tab in enumerate(website_dict):
-            print(f"{i}. {tab['title']}")
-            if tab['nested_tabs']:
-                for j, nested_tab in enumerate(tab['nested_tabs']):
-                    print(f"   {i}.{j}. {nested_tab['title']}")
+        for i, k in website_dict.items():
+            if k in parent_child_dict:
+                parent_child_dict[k].append(i)
+            else:
+                parent_child_dict[k] = [i]
+
+        for parent, children in parent_child_dict.items():
+            if len(children) > 1:
+                print(children[0] + ":")
+                for m in range(1, len(children)):
+                    print(children[m])
+            else:
+                print(parent)
+
+
 
 
 
     
 
 
-def openNestedTab():
+#def openNestedTab():
     
 
 

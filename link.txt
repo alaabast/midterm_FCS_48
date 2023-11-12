@@ -1,4 +1,1 @@
-facebook https://www.facebook.com
-google https://www.google.com
-SE factory https:/www.sefactory.io
-wikipedia https://www.wikipedia.org/
+SEfactory https://www.sefactory.io

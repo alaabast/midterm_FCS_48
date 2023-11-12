@@ -3,6 +3,8 @@ import requests
 import pathlib
 import operator
 import os
+import json
+
 def main():
     website_dict = {}
 
@@ -50,20 +52,38 @@ def main():
             print("the page source is :\n")
             print(source)
                
+        elif x==4:
+            print("All open tabs:")
+            for name,link in website_dict.items():
+                print("_ "+name+"\n")                
+        
+        elif x == 7:
+            data = {}
+            y=input("Enter the path of the file:\n")
+            for k, v in website_dict.items():
+                website_url = website_dict[k]
+                req = requests.get(website_url)  # create request
+                source = req.content  # get the page source
+                source = source.decode()  # convert it to string
+                data[k] = [v, source]
+
+            with open(y +"data.json", "w", encoding="utf-8") as writing:
+                json.dump(data, writing)
                 
-        
-        
+           
         elif x == 8: #source:https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/
-            with open("./link.txt", "r") as f:
+           path=input("Enter the path of your file:\n")
+           with open(path, "r") as f:
                 for line in f:
                     words = line.split()
                     name = words[0]
                     link = words[1]
                     website_dict[name] = link
                     
-            print(website_dict)
+           print(website_dict)
             
             
+
         elif x == 9:
             # Exit the program.
             break
@@ -74,4 +94,6 @@ def main():
    
     print("End of the program \nThank you...")
 
+    
+    
 main()

@@ -57,7 +57,12 @@ def main():
             for name,link in website_dict.items():
                 print("_ "+name+"\n")                
         
-        elif x == 7:
+        elif x == 6:
+            website_dict={}
+            
+            
+            
+        elif x == 7: #source: https://realpython.com/lessons/serializing-json-data/
             data = {}
             y=input("Enter the path of the file:\n")
             for k, v in website_dict.items():

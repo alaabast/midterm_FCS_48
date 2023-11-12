@@ -23,10 +23,12 @@ def main():
             index = input("Enter the title of the website :")
             if index in website_dict:
                 t=index
+                webbrowser.get(website_dict[t]).close_window()
             if index not in website_dict:
                 print("This tab is not availble\n Closing the last tab...")
                 keys_list = list(website_dict.keys())
                 t = keys_list[-1]
+                webbrowser.get(website_dict[t]).close_window()
             del website_dict[t]
             print(website_dict)
             
@@ -48,6 +50,8 @@ def main():
             print("the page source is :\n")
             print(source)
                
+                
+        
         
         elif x == 8: #source:https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/
             with open("./link.txt", "r") as f:

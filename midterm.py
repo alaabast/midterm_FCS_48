@@ -49,7 +49,7 @@ def main():
             print(source)
                
         
-        elif x == 8:
+        elif x == 8: #source:https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/
             with open("./link.txt", "r") as f:
                 for line in f:
                     words = line.split()

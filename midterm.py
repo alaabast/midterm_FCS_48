@@ -155,17 +155,17 @@ def displayAllTabs():
     else:
         for i, k in website_dict.items():
             if k in parent_child_dict:
-                parent_child_dict[k].append(i)
+                parent_child_dict[k].append(i) #add the title to the list when the other tab has the same link
             else:
                 parent_child_dict[k] = [i]
 
-        for parent, children in parent_child_dict.items():
+        for link, children in parent_child_dict.items():
             if len(children) > 1:
-                print(children[0] + ":")
+                print(children[0] + ":") #the first is the parent
                 for m in range(1, len(children)):
                     print(children[m])
             else:
-                print(parent)
+                print(children)
 
 
 
@@ -174,7 +174,7 @@ def displayAllTabs():
     
 
 
-#def openNestedTab():
+def openNestedTab():
     
 
 
